@@ -1,0 +1,126 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GameCoin Hub</title>
+  <style>.card img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 10px;
+  }
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      margin: 0;
+    }
+    header {
+      background: #020617;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      color: #38bdf8;
+    }
+    .games {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+    .card {
+      background: #020617;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    }
+    .card img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+    .form-box {
+      max-width: 420px;
+      margin: 30px auto;
+      background: #020617;
+      padding: 20px;
+      border-radius: 12px;
+      display: none;
+    }
+    .form-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      border: none;
+    }
+    button {
+      background: #38bdf8;
+      color: #020617;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body><header>
+  <h1>Billy Bay Shop</h1>
+  <p>Fast & Safe Game Top-Ups</p>
+</header><section class="games">
+  <div class="card" onclick="openForm('Mobile Legends')">
+    <img src="images/ml.png" alt="Mobile Legends">
+    <h3>Mobile Legends</h3>
+  </div>
+  <div class="card" onclick="openForm('PUBG Mobile')">
+    <img src="images/pubg.webp" alt=pubg">
+    <h3>PUBG Mobile</h3>
+  </div>
+  <div class="card" onclick="openForm('Roblox')">
+    <img src="images/roblox.svg" alt=roblox">
+    <h3>Roblox</h3>
+  </div>
+</section><div class="form-box" id="orderForm">
+  <h2 id="gameTitle"></h2>
+  <input type="text" placeholder="Player ID" />
+  <select>
+    <option>Select Amount</option>
+    <option>Small Pack</option>
+    <option>Medium Pack</option>
+    <option>Large Pack</option>
+  </select>
+  <select>
+    <option>Payment Method</option>
+    <option>KBZPay</option>
+    <option>WavePay</option>
+  </select>
+  <button>Submit Order</button>
+</div><footer>
+  © 2026 GameCoin Hub · Not affiliated with game publishers
+</footer><script>
+  function openForm(game) {
+    document.getElementById('orderForm').style.display = 'block';
+    document.getElementById('gameTitle').innerText = game + ' Top-up';
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth'});
+  }
+  </script>
+  </body>
+  </html>
